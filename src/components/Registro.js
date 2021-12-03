@@ -4,24 +4,24 @@ import Swal from 'sweetalert2';
 
 // Redux
 import { useDispatch } from 'react-redux';
-import { borrarProductoAction, obtenerProductoEditar } from '../actions/productoActions';
+import { borrarRegistroAction, obtenerRegistroEditar } from '../actions/registroActions';
 
 
-const Producto = ({producto}) => {
+const Registro = ({registro}) => {
 
-    const { nombre, precio, id } = producto;
+    const { nombre, precio, id } = registro;
 
     const dispatch = useDispatch();
 
     const history = useHistory();
 
     // Confirmar si desea eliminarlo
-    const confirmarEliminarProducto = id => {
+    const confirmarEliminarRegistro = id => {
 
         // preguntar al usuario
         Swal.fire({
             title: 'Estas seguro?',
-            text: "Un producto eliminado no se puede recuperar!",
+            text: "Un registro eliminado no se puede recuperar!",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
@@ -30,15 +30,15 @@ const Producto = ({producto}) => {
           }).then((result) => {
             if (result.isConfirmed) {
             // pasarlo al action
-            dispatch( borrarProductoAction(id));
+            dispatch( borrarRegistroAction(id));
             }
           })
     }
 
     // Funcion que redirige de forma programada
-    const redireccionarEdicion = producto => {
-        dispatch( obtenerProductoEditar(producto));
-        history.push(`/productos/editar/${producto.id}`)
+    const redireccionarEdicion = registro => {
+        dispatch( obtenerRegistroEditar(registro));
+        history.push(`/registros/editar/${registro.id}`)
     }
 
     return ( 
@@ -49,17 +49,17 @@ const Producto = ({producto}) => {
                 <button 
                     className=" btn btn-primary mr-2"
                     type="button"
-                    onClick={ () => redireccionarEdicion(producto)}
+                    onClick={ () => redireccionarEdicion(registro)}
                 >Editar</button>
 
                 <button
                     type="button"
                     className="btn btn-danger"
-                    onClick={( ) => confirmarEliminarProducto(id)}
+                    onClick={( ) => confirmarEliminarRegistro(id)}
                 >Eliminar</button>
             </td>
         </tr>
      );
 }
  
-export default Producto;
+export default Registro;

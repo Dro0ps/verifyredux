@@ -11,9 +11,9 @@ const Header = () => {
                 </h1>
             </div>
 
-            <Link to ={"/productos/nuevo"}
+            <Link to ={"/registros/nuevo"}
                 className="btn btn-danger nuevo-post d-block d-md-inline-block"
-            >Agregar Producto &#43;</Link>
+            >Agregar registro &#43;</Link>
 
 
         </nav>

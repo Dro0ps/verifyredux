@@ -1,12 +1,12 @@
 
 import { combineReducers } from 'redux';
-import productosReducer from './productosReducer';
+import registrosReducer from './registrosReducer';
 import alertaReducer from './alertaReducer';
 
 
 
 
 export default combineReducers({
-    productos: productosReducer,
+    registros: registrosReducer,
     alerta: alertaReducer
 });

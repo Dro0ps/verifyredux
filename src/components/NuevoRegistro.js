@@ -4,10 +4,10 @@ import { useDispatch, useSelector } from 'react-redux';
 
 
 // Actions de Redux
-import { crearNuevoProductoAction } from '../actions/productoActions';
+import { crearNuevoRegistroAction } from '../actions/registroActions';
 import { mostrarAlerta, ocultarAlertaAction } from '../actions/alertaActions';
 
-const NuevoProducto = ({history}) => {
+const NuevoRegistro = ({history}) => {
 
     // State del componente
     const [ nombre, guardarNombre ] = useState('');
@@ -17,16 +17,16 @@ const NuevoProducto = ({history}) => {
     const dispatch = useDispatch();
 
     // Acceder al state del store
-    const cargando = useSelector( state => state.productos.loading );
-    const error = useSelector( state => state.productos.error );
+    const cargando = useSelector( state => state.registros.loading );
+    const error = useSelector( state => state.registros.error );
     const alerta = useSelector( state => state.alerta.alerta);
 
 
-    // Manda a llamar el action de productoAction
-    const agregarProducto = producto => dispatch(crearNuevoProductoAction(producto));
+    // Manda a llamar el action de registroAction
+    const agregarRegistro = registro => dispatch(crearNuevoRegistroAction(registro));
 
     // Cuando el usuario haga submit
-    const submitNuevoProducto = e => {
+    const submitNuevoregistro = e => {
         e.preventDefault();
 
         //Validar Formulario
@@ -45,8 +45,8 @@ const NuevoProducto = ({history}) => {
         // Si no hay errores
         dispatch( ocultarAlertaAction() );
 
-        // Crear el nuevo producto
-        agregarProducto({
+        // Crear el nuevo registro
+        agregarRegistro({
             nombre,
             precio
         });
@@ -62,20 +62,20 @@ const NuevoProducto = ({history}) => {
                 <div className="card">
                     <div className="card-body">
                         <h2 className="text-center mb-4 font-weight-bold">
-                            Agregar Nuevo Producto
+                            Agregar Nuevo registro
                         </h2>
 
                         {alerta ? <p className={alerta.classes}>{alerta.msg}</p> : null }
 
                         <form
-                            onSubmit={submitNuevoProducto}
+                            onSubmit={submitNuevoregistro}
                         >
                             <div className="form-groud mt-3">
-                                <label>Nombre Producto</label>
+                                <label>Nombre registro</label>
                                 <input
                                     type="text"
                                     className="form-control"
-                                    placeholder="Nombre Producto"
+                                    placeholder="Nombre registro"
                                     name="nombre"
                                     value={nombre}
                                     onChange={e => guardarNombre(e.target.value)}
@@ -113,4 +113,4 @@ const NuevoProducto = ({history}) => {
      );
 }
  
-export default NuevoProducto;
+export default NuevoRegistro;

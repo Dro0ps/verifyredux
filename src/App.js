@@ -1,9 +1,9 @@
 import React from 'react';
 import Header from "./components/Header";
-import Productos from './components/Productos';
+import Registros from './components/Registros';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import NuevoProducto from './components/NuevoProducto';
-import EditarProducto from './components/EditarProducto';
+import NuevoRegistro from './components/NuevoRegistro';
+import EditarRegistro from './components/EditarRegistro';
 
 // Redux
 import { Provider } from 'react-redux';
@@ -20,9 +20,9 @@ function App() {
       <Header/>
       <div className="container mt-5">
         <Switch>
-          <Route exact path="/" component={Productos}/>
-          <Route exact path="/productos/nuevo" component={NuevoProducto}/>
-          <Route exact path="/productos/editar/:id" component={EditarProducto}/>
+          <Route exact path="/" component={Registros}/>
+          <Route exact path="/registros/nuevo" component={NuevoRegistro}/>
+          <Route exact path="/registros/editar/:id" component={EditarRegistro}/>
         </Switch>
 
 

@@ -1,32 +1,32 @@
 import React, { useEffect } from 'react';
-import Producto from './Producto';
+import Registro from './Registro';
 
 // Redux
 import { useSelector, useDispatch } from 'react-redux';
-import { obtenerProductosAction } from '../actions/productoActions'
+import { obtenerRegistrosAction } from '../actions/registroActions'
 
 
-const Productos = () => {
+const Registros = () => {
 
     const dispatch = useDispatch();
 
     useEffect(() => {
         // consultar la api
-        const cargarProductos = () => dispatch( obtenerProductosAction());
-        cargarProductos();
+        const cargarregistros = () => dispatch( obtenerRegistrosAction());
+        cargarregistros();
         // eslint-disable-next-line
     }, [])
 
     // Obtener el state
-    const productos = useSelector(state => state.productos.productos);
-    const error = useSelector(state => state.productos.error);
-    const loading = useSelector(state => state.productos.loading)
+    const registros = useSelector(state => state.registros.registros);
+    const error = useSelector(state => state.registros.error);
+    const loading = useSelector(state => state.registros.loading)
 
     
 
     return ( 
     <>
-        <h2 className="text-center my-5">Listado de Productos</h2>
+        <h2 className="text-center my-5">Listado de registros</h2>
 
         { error ? <p className="font-weight-bold alert-danger text-center mt-4">Hubo un error</p> : null}
 
@@ -41,11 +41,11 @@ const Productos = () => {
                 </tr>
             </thead>
             <tbody>
-                { productos.lenght === 0 ? ' No hay productos' : (
-                    productos.map( producto => (
-                        <Producto
-                            key={producto.id}
-                            producto={producto}
+                { registros.lenght === 0 ? ' No hay registros' : (
+                    registros.map( registro => (
+                        <registro
+                            key={registro.id}
+                            registro={registro}
                         />
                     ))
                 )}
@@ -58,4 +58,4 @@ const Productos = () => {
      );
 }
  
-export default Productos;
+export default Registros;

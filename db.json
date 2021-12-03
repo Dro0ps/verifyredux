@@ -1,5 +1,5 @@
 {
-  "productos": [
+  "registros": [
     {
       "id": 1,
       "nombre": "Jugo de Zanahoria",
@@ -56,9 +56,14 @@
       "id": 15
     },
     {
-      "nombre": "producto 99",
+      "nombre": "registro 99",
       "precio": 5000,
       "id": 16
+    },
+    {
+      "nombre": "123",
+      "precio": 333,
+      "id": 17
     }
   ]
 }
