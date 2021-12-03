@@ -7,7 +7,7 @@ const Header = () => {
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary justify-content-between">
             <div className="container">
                 <h1>
-                    <Link to={'/'} className="text-light">Notas de Ventas Homar</Link>
+                    <Link to={'/'} className="text-light">Revisión de Mercaderia</Link>
                 </h1>
             </div>
 

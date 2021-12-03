@@ -1,62 +1,7 @@
 {
   "registros": [
     {
-      "id": 1,
-      "nombre": "Jugo de Zanahoria",
-      "precio": "460"
-    },
-    {
-      "id": 2,
-      "nombre": "Jugo de Naranja",
-      "precio": "100"
-    },
-    {
-      "nombre": "Rib Eye 800g",
-      "precio": "200",
-      "id": 4
-    },
-    {
-      "nombre": "Jugo de Fresa",
-      "precio": "200",
-      "id": 5
-    },
-    {
-      "nombre": "Jugo de Frutas",
-      "precio": 200,
-      "id": 6
-    },
-    {
-      "nombre": "Sal",
-      "precio": 500,
-      "id": 8
-    },
-    {
-      "nombre": "Azucar",
-      "precio": 500,
-      "id": 9
-    },
-    {
-      "nombre": "Yerba Mate",
-      "precio": 2330,
-      "id": 11
-    },
-    {
-      "nombre": "Jurel en Lata",
-      "precio": 630,
-      "id": 13
-    },
-    {
-      "nombre": "Yerba Mate Colon",
-      "precio": 2300,
-      "id": 14
-    },
-    {
-      "nombre": "Yerba Mate Colon 2",
-      "precio": 5800,
-      "id": 15
-    },
-    {
-      "nombre": "registro 99",
+      "nombre": "registro 96",
       "precio": 5000,
       "id": 16
     },
@@ -64,6 +9,11 @@
       "nombre": "123",
       "precio": 333,
       "id": 17
+    },
+    {
+      "nombre": "Pedido 205231",
+      "precio": 250000,
+      "id": 18
     }
   ]
 }

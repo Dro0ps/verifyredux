@@ -12,8 +12,8 @@ const Registros = () => {
 
     useEffect(() => {
         // consultar la api
-        const cargarregistros = () => dispatch( obtenerRegistrosAction());
-        cargarregistros();
+        const cargarRegistros = () => dispatch( obtenerRegistrosAction());
+        cargarRegistros();
         // eslint-disable-next-line
     }, [])
 
@@ -43,7 +43,7 @@ const Registros = () => {
             <tbody>
                 { registros.lenght === 0 ? ' No hay registros' : (
                     registros.map( registro => (
-                        <registro
+                        <Registro
                             key={registro.id}
                             registro={registro}
                         />
